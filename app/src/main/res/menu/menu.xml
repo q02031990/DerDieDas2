@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/MenuShare"
+        android:alphabeticShortcut="s"
+        android:title="Share for your friends"
+        />
+    <item
+        android:id="@+id/MenuUpdate"
+        android:alphabeticShortcut="t"
+        android:title="Update new Version"
+        />
+
+    <item
+        android:visible="false"
+        android:id="@+id/MenuUpdateDatabase"
+        android:alphabeticShortcut="t"
+        android:title="Update Database"
+        />
+    <item
+        android:id="@+id/MenuAddWord"
+        android:alphabeticShortcut="t"
+        android:title="Add some Words"
+        />
+
+    <item
+        android:id="@+id/MenuAbout"
+        android:alphabeticShortcut="t"
+        android:title="About us"
+        />
+</menu>

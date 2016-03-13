@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".addWord">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtArtikel"
+        android:autoText="false"
+        android:hint="der, die or das"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtWoeter"
+        android:autoText="false"
+        android:hint="Your Word"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/txtArtikel"
+        android:layout_toEndOf="@+id/txtArtikel" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/backToMain"
+        android:id="@+id/btnBack"
+        android:layout_below="@+id/adView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="add This Word"
+        android:id="@+id/btnAddWord"
+        android:layout_alignTop="@+id/btnBack"
+        android:layout_alignRight="@+id/txtWoeter"
+        android:layout_alignEnd="@+id/txtWoeter" />
+
+    <com.google.android.gms.ads.AdView
+        android:visibility="visible"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="FLUID"
+        ads:adUnitId="@string/banner_ad_unit_id"
+        android:layout_gravity="center|bottom"
+        android:layout_below="@+id/txtDefinition"
+        android:layout_toRightOf="@+id/txtID"
+        android:layout_toEndOf="@+id/txtID" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="105dp"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/txtDefinition"
+        android:hint="Your definition"
+        android:layout_below="@+id/txtArtikel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/txtWoeter"
+        android:layout_alignEnd="@+id/txtWoeter"
+        android:layout_alignParentTop="false"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="ID"
+        android:id="@+id/txtID"
+        android:layout_alignTop="@+id/btnAddWord"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="invisible" />
+
+</RelativeLayout>
